@@ -88,6 +88,9 @@ body {
 
 a {
 	color: $link-fg;
+	&:focus {
+		outline: 0.15rem dotted $button-focus-border;
+	}
 }
 
 /*
@@ -144,6 +147,10 @@ main {
 	&:hover {
 		background: $button-hover-bg;
 	}
+
+	&:focus {
+		outline: 0.15rem dashed $button-focus-border;
+	}
 }
 
 /*
@@ -162,6 +169,11 @@ input, select, textarea, .input {
 
 	&:focus, &:active {
 		border-color: $input-focus-border;
+	}
+
+	&[type=checkbox]:focus,
+	&[type=radio]:focus {
+		outline: 0.15rem dashed $input-focus-border;
 	}
 
 	&:invalid, .invalid & {
